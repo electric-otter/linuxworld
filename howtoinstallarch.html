@@ -1,7 +1,61 @@
-<title>How to install arch - Linux World</title>
-<h1>How to install arch</h1>
-<label>You need an USB. Open balena etcher, put your arch iso in balena, then flash the drive. Press the startup menu key immediately on boot, change the boot ISO to arch.</label>
-<label>Installing arch can be hard, but theres a simpler way, first: Open cfdisk and create a partition. Next: Go to archinstall, select your partition select mirror, and select language</label>
-<label>Partition type: You can select any, but lets go with ext4</label>
-<label>Make a user, users are required on all linux distros. Now, select an DE, lets choose KDE, choose a audio server, lets pick pulseaudio for now.</label>
-<label>Select a network config, lets go with NetworkManager, now install!</label>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How to install Arch Linux - Step-by-step guide">
+  <title>How to install Arch - Linux World</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>How to Install Arch</h1>
+  <div class="content">
+    <p><strong>Step 1: Prepare the USB Drive</strong></p>
+    <p>You need a USB drive. Open Balena Etcher, select your Arch ISO file, and then flash the drive. Press the startup menu key immediately on boot and change the boot device to your Arch USB.</p>
+
+    <p><strong>Step 2: Partition the Drive</strong></p>
+    <p>Installing Arch can be challenging, but we’ll guide you through it. First, open `cfdisk` and create a partition. Then, use `archinstall` to select your partition, choose your mirror, and set your language preferences.</p>
+
+    <p><strong>Step 3: Choose a Partition Type</strong></p>
+    <p>You can select any partition type, but for simplicity, let’s go with <code>ext4</code>.</p>
+
+    <p><strong>Step 4: Create a User</strong></p>
+    <p>A user is required on all Linux distributions. Create a user account and choose a desktop environment (DE). For this tutorial, we’ll use KDE. Select a sound server—Pulseaudio is a good choice for now.</p>
+
+    <p><strong>Step 5: Configure the Network</strong></p>
+    <p>For networking, select the <strong>NetworkManager</strong> option.</p>
+
+    <p><strong>Step 6: Final Installation</strong></p>
+    <p>Once everything is set up, proceed with the installation!</p>
+  </div>
+</body>
+</html>
