@@ -1,7 +1,7 @@
- 
 .lab-gradient-generator {
   margin-inline-start: 2rem; /* Responsive margin that adjusts based on text direction */
 }
+
 .lab-gradient-display {
   background: linear-gradient(
     to right, 
@@ -9,34 +9,46 @@
     lab(var(--l-end) var(--a-end) var(--b-end))
   ); /* Creates a gradient using LAB colors */
 }
- 
+
 .color-strip:nth-child(1) {
   --l: 90%;
   --a: -80;
   --b: 80;
   background-color: lab(var(--l) var(--a) var(--b));
 }
+
 .color-strip:nth-child(2) {
   --l: 75%;
   --a: -40;
   --b: 40;
   background-color: lab(var(--l) var(--a) var(--b));
 }
+
 .color-strip:nth-child(3) {
   --l: 60%;
   --a: 0;
   --b: 0;
   background-color: lab(var(--l) var(--a) var(--b));
 }
+
 .color-strip:nth-child(4) {
   --l: 45%;
   --a: 40;
   --b: -40;
   background-color: lab(var(--l) var(--a) var(--b));
 }
+
 .color-strip:nth-child(5) {
   --l: 30%;
   --a: 80;
   --b: -80;
   background-color: lab(var(--l) var(--a) var(--b));
 }
+
+/* Optional: Add media queries to handle responsiveness */
+@media (max-width: 768px) {
+  .lab-gradient-generator {
+    margin-inline-start: 1rem; /* Adjust for smaller screens */
+  }
+}
+
