@@ -1,54 +1,81 @@
+:root {
+  --color-start-l: 90%;
+  --color-start-a: -80;
+  --color-start-b: 80;
+
+  --color-mid-l: 75%;
+  --color-mid-a: -40;
+  --color-mid-b: 40;
+
+  --color-neutral-l: 60%;
+  --color-neutral-a: 0;
+  --color-neutral-b: 0;
+
+  --color-end-l: 45%;
+  --color-end-a: 40;
+  --color-end-b: -40;
+
+  --color-last-l: 30%;
+  --color-last-a: 80;
+  --color-last-b: -80;
+}
+
 .lab-gradient-generator {
-  margin-inline-start: 2rem; /* Responsive margin that adjusts based on text direction */
+  margin-inline-start: 2rem; /* Adjust margin to the left based on the text direction */
+  display: flex; /* Flexbox to make it more adaptable */
+  justify-content: center; /* Centers the content horizontally */
 }
 
 .lab-gradient-display {
   background: linear-gradient(
-    to right, 
-    lab(var(--l-start) var(--a-start) var(--b-start)), 
-    lab(var(--l-end) var(--a-end) var(--b-end))
-  ); /* Creates a gradient using LAB colors */
+    to right,
+    lab(var(--color-start-l) var(--color-start-a) var(--color-start-b)),
+    lab(var(--color-mid-l) var(--color-mid-a) var(--color-mid-b)),
+    lab(var(--color-neutral-l) var(--color-neutral-a) var(--color-neutral-b)),
+    lab(var(--color-end-l) var(--color-end-a) var(--color-end-b)),
+    lab(var(--color-last-l) var(--color-last-a) var(--color-last-b))
+  ); /* Gradient with LAB color values */
+  width: 100%; /* Ensures gradient spans the full width */
+  height: 200px; /* Example fixed height for the gradient container */
+}
+
+.color-strip {
+  background-color: transparent; /* Background set dynamically via custom properties */
+  height: 20px; /* Adjust the height of each color strip */
+  margin-bottom: 5px; /* Spacing between strips */
 }
 
 .color-strip:nth-child(1) {
-  --l: 90%;
-  --a: -80;
-  --b: 80;
-  background-color: lab(var(--l) var(--a) var(--b));
+  background-color: lab(var(--color-start-l) var(--color-start-a) var(--color-start-b));
 }
 
 .color-strip:nth-child(2) {
-  --l: 75%;
-  --a: -40;
-  --b: 40;
-  background-color: lab(var(--l) var(--a) var(--b));
+  background-color: lab(var(--color-mid-l) var(--color-mid-a) var(--color-mid-b));
 }
 
 .color-strip:nth-child(3) {
-  --l: 60%;
-  --a: 0;
-  --b: 0;
-  background-color: lab(var(--l) var(--a) var(--b));
+  background-color: lab(var(--color-neutral-l) var(--color-neutral-a) var(--color-neutral-b));
 }
 
 .color-strip:nth-child(4) {
-  --l: 45%;
-  --a: 40;
-  --b: -40;
-  background-color: lab(var(--l) var(--a) var(--b));
+  background-color: lab(var(--color-end-l) var(--color-end-a) var(--color-end-b));
 }
 
 .color-strip:nth-child(5) {
-  --l: 30%;
-  --a: 80;
-  --b: -80;
-  background-color: lab(var(--l) var(--a) var(--b));
+  background-color: lab(var(--color-last-l) var(--color-last-a) var(--color-last-b));
 }
 
-/* Optional: Add media queries to handle responsiveness */
+/* Optional: Improve responsiveness for smaller screens */
 @media (max-width: 768px) {
   .lab-gradient-generator {
-    margin-inline-start: 1rem; /* Adjust for smaller screens */
+    margin-inline-start: 1rem; /* Reduce margin for smaller screens */
+  }
+
+  .lab-gradient-display {
+    height: 150px; /* Adjust gradient height for smaller screens */
+  }
+
+  .color-strip {
+    height: 15px; /* Make strips shorter on smaller screens */
   }
 }
-
